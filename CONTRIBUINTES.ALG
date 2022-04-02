@@ -85,7 +85,14 @@ inicio
    retorne abat
 fimfuncao
 
-
+// Parametros:
+// Efeito: calcular o imposto devido
+funcao calcImpostoDevido(impostoBruto, abatimento : real ) : real
+var
+   impostoDevido : real
+inicio
+   retorne impostodDevido = impostoBruto -  abatimento
+fimfuncao
 
 Algoritmo "CONTRIBUINTES"
 
