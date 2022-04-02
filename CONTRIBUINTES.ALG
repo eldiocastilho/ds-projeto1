@@ -87,11 +87,12 @@ fimfuncao
 
 // Parametros:
 // Efeito: calcular o imposto devido
-funcao calcImpostoDevido(impostoBruto, abatimento : real ) : real
+funcao calcImpostoDevido( impostoBruto : real; valAbatimento: real ) : real
 var
-   impostoDevido : real
+   valImpostoDevido : real
 inicio
-   retorne impostodDevido = impostoBruto -  abatimento
+   valImpostoDevido <- impostoBruto - valAbatimento
+   retorne valImpostoDevido
 fimfuncao
 
 Algoritmo "CONTRIBUINTES"
@@ -133,7 +134,7 @@ Inicio
 
    valAbatimento <-  abatimento( impostoSalario, impostoServico, impostoGanhoCapital, despesasMedicas, despesasEducaionais )
 
-   impostoDevido <-  impostoBrutoTot -  valAbatimento
+   impostoDevido <-  calcImpostoDevido( impostoBrutoTot, valAbatimento )
 
 
    escreval( )
